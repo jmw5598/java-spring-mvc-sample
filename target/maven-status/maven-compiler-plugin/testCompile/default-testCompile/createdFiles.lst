@@ -1,0 +1,4 @@
+com/mvcdemo/web/controller/HomeControllerTest.class
+com/mvcdemo/MvcDemoApplicationTests.class
+com/mvcdemo/web/controller/rest/ContactRestControllerTest.class
+com/mvcdemo/web/controller/ContactControllerTest.class
