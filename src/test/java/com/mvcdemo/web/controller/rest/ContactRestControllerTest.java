@@ -67,7 +67,7 @@ public class ContactRestControllerTest {
 	@Test
 	public void shouldReturnContactByIdJson() throws Exception {
 		
-		mockMvc.perform(get("/api/contacts/0"))
+		mockMvc.perform(get("/api/contacts/" + contactId))
 			.andExpect(status().isOk())
 			.andExpect(content().contentType(MediaType.APPLICATION_JSON))
 			.andExpect(jsonPath("$.id", is(0)))
