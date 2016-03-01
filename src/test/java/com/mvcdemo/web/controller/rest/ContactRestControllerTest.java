@@ -26,7 +26,7 @@ public class ContactRestControllerTest {
 	private MockMvc mockMvc;
 	private List<Contact> expectedContacts;
 	private Contact expectedContact;
-	private int contactId;
+	private int contactId = 0;
 	
 	@InjectMocks
 	private ContactRestController mockController;
