@@ -6,7 +6,8 @@ import com.mvcdemo.web.bean.Contact;
 
 public interface ContactRepository {
 
-	public List<Contact> findAllContacts();
-	public Contact findContactById(int id);
+	List<Contact> findAllContacts();
+	Contact findContactById(int id);
+	Contact addContact(Contact contact);
 	
 }

@@ -109,5 +109,35 @@ h1 {
 }
 
 .btn-md {
-	width: 15%;
+	width: 16%;
+}
+
+.btn-sm {
+	width: 8%;
+}
+
+.btns-horizontal {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+input[type=text] {
+	border: none;
+	outline: none;
+	line-height: 30px;
+	padding-left: 10px;
+	color: #292929;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	margin-bottom: 10px;
+	background: #f3f3f3;
+	display: block;
+}
+
+input[type=submit] {
+	outline: none;
+	border: none;
+	line-height: 30px;
 }

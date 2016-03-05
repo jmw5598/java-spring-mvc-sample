@@ -9,10 +9,12 @@
 	<body>
 		<div class="container">
 			<h1>Contacts</h1>
-			<div class="btn btn-md btn-blue">
-				<span><a href="<c:url value="/home" />">&#9664 Return home</a></span>
+			<div class="btn btn-sm btn-green btns-horizontal">
+				<span><a href="<c:url value="/home" />">Return home</a></span>
 			</div>
-			<br/>
+			<div class="btn btn-sm btn-blue btns-horizontal">
+				<span><a href="<c:url value="/contacts/add_form" />">Add contact</a></span>
+			</div>
 			<div class="container-quarter">
 				<c:forEach items="${contacts}" var="contact">
 					<a href="<c:url value="contacts/" /><c:out value="${contact.id}" />">

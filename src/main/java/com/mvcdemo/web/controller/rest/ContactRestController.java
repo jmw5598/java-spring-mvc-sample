@@ -3,9 +3,12 @@ package com.mvcdemo.web.controller.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mvcdemo.web.bean.Contact;
@@ -36,5 +39,12 @@ public class ContactRestController {
 		
 		return contactRepository.findContactById(id);
 	
+	}
+	
+	@RequestMapping(value = "/add", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
+	public Contact contactAdd(Contact contact) {
+		
+		return contactRepository.addContact(contact);
+		
 	}
 }

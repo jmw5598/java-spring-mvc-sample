@@ -9,10 +9,15 @@
 	<body>
 		<div class="container">
 			<h1>Selected Contact</h1>
-			<div class="btn btn-md btn-green">
-				<span><a href="<c:url value="/contacts" />">&#9664 Return to contacts</a></span>
+			<div class="btn btn-sm btn-green btns-horizontal">
+				<span><a href="<c:url value="/home" />">Return home</a></span>
 			</div>
-			<br />
+			<div class="btn btn-sm btn-blue btns-horizontal">
+				<span><a href="<c:url value="/contacts" />">View contacts</a></span>
+			</div>
+			<div class="btn btn-sm btn-purple btns-horizontal">
+				<span><a href="<c:url value="/contacts/add_form" />">Add contact</a></span>
+			</div>
 			
 			<div>
 				<div class="contact">

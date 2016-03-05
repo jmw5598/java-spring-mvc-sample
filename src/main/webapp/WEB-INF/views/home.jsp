@@ -8,8 +8,11 @@
 	<body>
 		<div class="container">
 			<h1>Home</h1>
-			<div class="btn btn-md btn-green">
+			<div class="btn btn-sm btn-green btns-horizontal">
 				<span><a href="<c:url value="/contacts" />">View contacts</a></span>
+			</div>
+			<div class="btn btn-sm btn-blue btns-horizontal">
+				<span><a href="<c:url value="/contacts/add_form" />">Add contact</a></span>
 			</div>
 		</div>
 	</body>

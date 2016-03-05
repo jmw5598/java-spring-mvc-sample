@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.mvcdemo.web.bean.Contact;
 import com.mvcdemo.web.repository.ContactRepository;
 
 @Controller
@@ -37,4 +38,20 @@ public class ContactController {
 		return "contact";
 		
 	}
+	
+	@RequestMapping(value="/add_form", method=RequestMethod.GET)
+	public String contactAddForm() {
+		
+		return "addForm";
+		
+	}
+	
+	@RequestMapping(value="/add", method=RequestMethod.POST)
+	public String contactAdd(Contact contact) {
+		
+		contact = contactRepository.addContact(contact);
+		return "redirect:/contacts/" + contact.getId();
+		
+	}
+	
 }
