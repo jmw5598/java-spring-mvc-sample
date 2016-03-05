@@ -75,7 +75,7 @@ public class ContactControllerTest {
 		
 		List<Contact> contacts = new ArrayList<Contact>();
 		
-		contacts.add( new Contact(0, "Jason", "White", "jw@gmail.com", "212-234-6425", "/resources/img/male1.png") );
+		contacts.add( new Contact(0, "Dillard", "White", "jw@gmail.com", "212-234-6425", "/resources/img/male1.png") );
 		contacts.add( new Contact(1, "Jane", "Smith", "js@gmail.com", "213-543-1214", "/resources/img/female1.png"));
 		contacts.add( new Contact(2, "Martin", "Sherwood", "ms@yahoo.com", "313-425-1211", "/resources/img/male2.png"));
 		contacts.add( new Contact(3, "Alex", "Robinson", "ar@hotmail.com", "242-344-2356", "/resources/img/default.png"));
