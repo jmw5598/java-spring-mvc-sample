@@ -19,13 +19,11 @@
 				<div class="contact">
 					<div class="contact-container">
 						<form action="<c:url value="/contacts/add" />" method="POST">
-							<c:if test="${not empty errors}">
-							<div class="error-container">
+							<div class="error-container hide <c:if test="${not empty errors}"><c:out value="show" /></c:if>">
 								<c:forEach items="${errors}" var="error">
 									<span class="error-msg exclam"><c:out value="${error.defaultMessage}" /></span>
 								</c:forEach>
 							</div>
-							</c:if>
 							<input type="text" placeholder="First name" name="firstName" value="<c:out value="${contact.firstName}" />" />
 							<input type="text" placeholder="Last name" name="lastName" value="<c:out value="${contact.lastName}" />" />
 							<input type="text" placeholder="Phone number" name="phone" value="<c:out value="${contact.phone}" />" />

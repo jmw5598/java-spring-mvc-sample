@@ -162,3 +162,11 @@ input[type=submit] {
 	line-height: 18px;
 	padding-left: 18px;
 }
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
