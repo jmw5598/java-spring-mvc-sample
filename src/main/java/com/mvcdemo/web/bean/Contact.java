@@ -1,15 +1,33 @@
 package com.mvcdemo.web.bean;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 import org.springframework.stereotype.Component;
 
 @Component
 public class Contact{
 	
+	
 	private int id;
+	
+	@NotNull
+	@Size(min = 2, max = 30)
 	private String firstName;
+	
+	@NotNull
+	@Size(min = 2, max = 30)
 	private String lastName;
+	
+	@NotNull
+	@Pattern(regexp="^[A-Za-z0-9+_.-]+@(.+)$")
 	private String email;
+	
+	@NotNull
+	@Pattern(regexp="\\d{3}-\\d{3}-\\d{4}")
 	private String phone;
+	
 	private String imgUrl;
 	
 	public Contact() {}
