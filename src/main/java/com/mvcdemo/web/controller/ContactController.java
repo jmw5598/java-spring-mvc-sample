@@ -50,10 +50,12 @@ public class ContactController {
 	}
 	
 	@RequestMapping(value="/add", method=RequestMethod.POST)
-	public String contactAdd(@Valid Contact contact, Errors errors) {
+	public String contactAdd(@Valid Contact contact, Errors errors, Model model) {
 		
 		if(errors.hasErrors()) {
 			// add errors to model to display errors on form.
+			model.addAttribute("errors", errors.getAllErrors());
+			model.addAttribute("contact", contact);
 			return "addForm";
 			
 		}

@@ -13,19 +13,19 @@ public class Contact{
 	private int id;
 	
 	@NotNull
-	@Size(min = 2, max = 30)
+	@Size(min = 2, max = 30, message="First name field must contain 2 to 30 characters")
 	private String firstName;
 	
 	@NotNull
-	@Size(min = 2, max = 30)
+	@Size(min = 2, max = 30, message="Last name field must contain 2 to 30 characters")
 	private String lastName;
 	
 	@NotNull
-	@Pattern(regexp="^[A-Za-z0-9+_.-]+@(.+)$")
+	@Pattern(regexp="^[A-Za-z0-9+_.-]+@(.+)$", message="Invalid email format")
 	private String email;
 	
 	@NotNull
-	@Pattern(regexp="\\d{3}-\\d{3}-\\d{4}")
+	@Pattern(regexp="\\d{3}-\\d{3}-\\d{4}", message="Invalid phone format (ej: 111-222-1213)")
 	private String phone;
 	
 	private String imgUrl;

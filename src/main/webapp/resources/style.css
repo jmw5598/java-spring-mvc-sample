@@ -141,3 +141,24 @@ input[type=submit] {
 	border: none;
 	line-height: 30px;
 }
+
+.error-container {
+	background: #444;
+	border-radius: 4px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.error-container > .error-msg {
+	font-size: .8em;
+	color: #AAA;
+	display: block;
+	margin: 4px 0px 2px 5px;
+}
+
+.exclam {
+	background: url("/resources/img/exclam2.png") center left no-repeat;
+	background-size: 14px 14px;
+	line-height: 18px;
+	padding-left: 18px;
+}
