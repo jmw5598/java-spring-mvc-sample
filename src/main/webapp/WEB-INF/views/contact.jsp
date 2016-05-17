@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ page session="false" %>
 
 <html>
@@ -8,15 +9,30 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1>Selected Contact</h1>
+			<h1><spring:message code="header.selectedContact" /></h1>
+			<div class="language">
+				Language: <a href="/?language=en">English</a> | <a href="/?language=es">Spanish</a>
+			</div>
 			<div class="btn btn-sm btn-green btns-horizontal">
-				<span><a href="<c:url value="/home" />">Return home</a></span>
+				<span>
+					<a href="<c:url value="/home" />">
+						<spring:message code="button.home" />
+					</a>
+				</span>
 			</div>
 			<div class="btn btn-sm btn-blue btns-horizontal">
-				<span><a href="<c:url value="/contacts" />">View contacts</a></span>
+				<span>
+					<a href="<c:url value="/contacts" />">
+						<spring:message code="button.viewContacts" />
+					</a>
+				</span>
 			</div>
 			<div class="btn btn-sm btn-purple btns-horizontal">
-				<span><a href="<c:url value="/contacts/add_form" />">Add contact</a></span>
+				<span>
+					<a href="<c:url value="/contacts/add_form" />">
+						<spring:message code="button.addContact" />
+					</a>
+				</span>
 			</div>
 			
 			<div>

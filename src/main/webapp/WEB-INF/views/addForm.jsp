@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ page session="false" %>
 
 <html>
@@ -8,12 +9,23 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1>Add New Contact</h1>
+			<h1><spring:message code="header.newContact" /></h1>
+			<div class="language">
+				Language: <a href="/?language=en">English</a> | <a href="/?language=es">Spanish</a>
+			</div>
 			<div class="btn btn-sm btn-green btns-horizontal">
-				<span><a href="<c:url value="/contacts" />">Return home</a></span>
+				<span>
+					<a href="<c:url value="/home" />">
+						<spring:message code="button.home" />
+					</a>
+				</span>
 			</div>
 			<div class="btn btn-sm btn-blue btns-horizontal">
-				<span><a href="<c:url value="/contacts" />">View contacts</a></span>
+				<span>
+					<a href="<c:url value="/contacts" />">
+						<spring:message code="button.viewContacts" />
+					</a>
+				</span>
 			</div>
 			<div class="container-quarter">
 				<div class="contact">
@@ -24,10 +36,10 @@
 									<span class="error-msg exclam"><c:out value="${error.defaultMessage}" /></span>
 								</c:forEach>
 							</div>
-							<input type="text" placeholder="First name" name="firstName" value="<c:out value="${contact.firstName}" />" />
-							<input type="text" placeholder="Last name" name="lastName" value="<c:out value="${contact.lastName}" />" />
-							<input type="text" placeholder="Phone number" name="phone" value="<c:out value="${contact.phone}" />" />
-							<input type="text" placeholder="Email" name="email" value="<c:out value="${contact.email}" />" />
+							<input type="text" placeholder="<spring:message code="placeholder.firstName" />" name="firstName" value="<c:out value="${contact.firstName}" />" />
+							<input type="text" placeholder="<spring:message code="placeholder.lastName" />" name="lastName" value="<c:out value="${contact.lastName}" />" />
+							<input type="text" placeholder="<spring:message code="placeholder.phone" />" name="phone" value="<c:out value="${contact.phone}" />" />
+							<input type="text" placeholder="<spring:message code="placeholder.email" />" name="email" value="<c:out value="${contact.email}" />" />
 							<input type="hidden" name="imgUrl" value="/resources/img/default.png" />
 							<input class="btn btn-purple" type="submit" value="Add contact" />
 						</form>
