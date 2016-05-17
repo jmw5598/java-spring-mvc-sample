@@ -11,7 +11,7 @@
 		<div class="container">
 			<h1><spring:message code="header.contacts" /></h1>
 			<div class="language">
-				Language: <a href="/?language=en">English</a> | <a href="/?language=es">Spanish</a>
+				Language: <a href="<c:url value="/contacts?language=en" />">English</a> | <a href="<c:url value="/contacts?language=es" />">Spanish</a>
 			</div>
 			<div class="btn btn-sm btn-green btns-horizontal">
 				<span>
