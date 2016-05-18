@@ -16,21 +16,21 @@
 				<a href="<c:url value="/logout" />"><spring:message code="button.logout" /></a> || 
 				<spring:message code="label.language" />: <a href="/?language=en">English</a> | <a href="/?language=es">Spanish</a>
 			</div>
-			<div class="btn btn-sm btn-green btns-horizontal">
+			<div class="btn btn-md btn-green btns-horizontal">
 				<span>
 					<a href="<c:url value="/home" />">
 						<spring:message code="button.home" />
 					</a>
 				</span>
 			</div>
-			<div class="btn btn-sm btn-blue btns-horizontal">
+			<div class="btn btn-md btn-blue btns-horizontal">
 				<span>
 					<a href="<c:url value="/contacts" />">
 						<spring:message code="button.viewContacts" />
 					</a>
 				</span>
 			</div>
-			<div class="btn btn-sm btn-purple btns-horizontal">
+			<div class="btn btn-md btn-purple btns-horizontal">
 				<span>
 					<a href="<c:url value="/contacts/add_form" />">
 						<spring:message code="button.addContact" />

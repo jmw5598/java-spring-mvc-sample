@@ -16,14 +16,14 @@
 				<a href="<c:url value="/logout" />"><spring:message code="button.logout" /></a> || 
 				<spring:message code="label.language" />: <a href="<c:url value="/contacts/add_form?language=en" />">English</a> | <a href="<c:url value="/contacts/add_form?language=es" />">Spanish</a>
 			</div>
-			<div class="btn btn-sm btn-green btns-horizontal">
+			<div class="btn btn-md btn-green btns-horizontal">
 				<span>
 					<a href="<c:url value="/home" />">
 						<spring:message code="button.home" />
 					</a>
 				</span>
 			</div>
-			<div class="btn btn-sm btn-blue btns-horizontal">
+			<div class="btn btn-md btn-blue btns-horizontal">
 				<span>
 					<a href="<c:url value="/contacts" />">
 						<spring:message code="button.viewContacts" />
@@ -44,6 +44,7 @@
 							<input type="text" placeholder="<spring:message code="placeholder.phone" />" name="phone" value="<c:out value="${contact.phone}" />" />
 							<input type="text" placeholder="<spring:message code="placeholder.email" />" name="email" value="<c:out value="${contact.email}" />" />
 							<input type="hidden" name="imgUrl" value="/resources/img/default.png" />
+							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 							<input class="btn btn-purple" type="submit" value="<spring:message code="button.addContact" />" />
 						</form>
 					</div>
