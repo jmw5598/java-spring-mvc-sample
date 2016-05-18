@@ -13,6 +13,7 @@
 		<div class="container">
 			<h1><spring:message code="header.newContact" /></h1>
 			<div class="language">
+				<a href="<c:url value="/logout" />"><spring:message code="label.logout" /></a> || 
 				<spring:message code="label.language" />: <a href="<c:url value="/contacts/add_form?language=en" />">English</a> | <a href="<c:url value="/contacts/add_form?language=es" />">Spanish</a>
 			</div>
 			<div class="btn btn-sm btn-green btns-horizontal">
