@@ -21,11 +21,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.anyRequest().authenticated()
 		.and()
 		.formLogin()
+			.loginPage("/login")
+			.usernameParameter("username")
+			.passwordParameter("password")
 			.permitAll()
 		.and()
 		.logout()
 			.logoutSuccessUrl("/")
-			.permitAll();
+			.permitAll()
+		.and()
+		.csrf();
 		
 	}
 	
@@ -34,7 +39,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		web
 			.ignoring()
-				.antMatchers("/resources/**");
+				.antMatchers("/resources/**")
+				.antMatchers("/?language=");
 		
 	}
 	
@@ -43,7 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		auth
 			.inMemoryAuthentication()
-				.withUser("jason").password("1112632").roles("USER");
+				.withUser("jason").password("white").roles("USER");
 		
 	}
 	
