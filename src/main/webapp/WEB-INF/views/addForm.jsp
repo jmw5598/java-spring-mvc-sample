@@ -13,7 +13,7 @@
 		<div class="container">
 			<h1><spring:message code="header.newContact" /></h1>
 			<div class="language">
-				<a href="<c:url value="/logout" />"><spring:message code="label.logout" /></a> || 
+				<a href="<c:url value="/logout" />"><spring:message code="button.logout" /></a> || 
 				<spring:message code="label.language" />: <a href="<c:url value="/contacts/add_form?language=en" />">English</a> | <a href="<c:url value="/contacts/add_form?language=es" />">Spanish</a>
 			</div>
 			<div class="btn btn-sm btn-green btns-horizontal">
@@ -44,7 +44,7 @@
 							<input type="text" placeholder="<spring:message code="placeholder.phone" />" name="phone" value="<c:out value="${contact.phone}" />" />
 							<input type="text" placeholder="<spring:message code="placeholder.email" />" name="email" value="<c:out value="${contact.email}" />" />
 							<input type="hidden" name="imgUrl" value="/resources/img/default.png" />
-							<input class="btn btn-purple" type="submit" value="Add contact" />
+							<input class="btn btn-purple" type="submit" value="<spring:message code="button.addContact" />" />
 						</form>
 					</div>
 				</div>
