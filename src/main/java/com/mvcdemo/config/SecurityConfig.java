@@ -25,7 +25,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.usernameParameter("username")
 			.passwordParameter("password")
 			.defaultSuccessUrl("/home")
-			.failureUrl("/login")
+			.failureUrl("/login?error=true")
 			.permitAll()
 		.and()
 		.logout()
@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		web
 			.ignoring()
-				.antMatchers("/resources/**", "/?language");
+				.antMatchers("/resources/**", "/login?language");
 		
 	}
 	
