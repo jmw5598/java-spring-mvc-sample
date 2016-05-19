@@ -1,6 +1,6 @@
 <c:set var="path"   value="${pageContext.request.servletPath}"/>
 <c:set var="locale" value="${pageContext.response.locale}" />
-
+<c:set var="requestURL" value="${requestScope['javax.servlet.forward.request_uri']}" />
 
 <div class="container-fluid">
 	<div class="navbar navbar-default navbar-fixed-top">
@@ -33,12 +33,12 @@
 				
 					<!-- if statement to determine which locale to mark active -->
 					<li class="<c:if test="${locale == 'en'}"><c:out value="active" /></c:if>"">
-						<a href="<c:url value="/?language=en" />">
+						<a href="<c:url value="${requestURL += '?language=en'}" />">
 							<spring:message code="label.language.english" />
 						</a>
 					</li>
 					<li class="<c:if test="${locale == 'es'}"><c:out value="active" /></c:if>"">
-						<a href="<c:url value="/?language=es" />">
+						<a href="<c:url value="${requestURL += '?language=es'}" />">
 							<spring:message code="label.language.spanish" />
 						</a>
 					</li>
