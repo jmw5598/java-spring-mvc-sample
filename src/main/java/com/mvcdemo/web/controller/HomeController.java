@@ -20,11 +20,9 @@ public class HomeController {
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String loginSuccess(Model model) {
 		
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		if(auth != null)
+		
 			return "redirect:/home";
-		else
-			return "redirect:/login";
+		
 		
 	}
 	
@@ -44,7 +42,7 @@ public class HomeController {
 		if(auth != null)
 			new SecurityContextLogoutHandler().logout(request, response, auth);
 		
-		return "redirect:/login?logout";
+		return "redirect:/login";
 	}
 	
 	
