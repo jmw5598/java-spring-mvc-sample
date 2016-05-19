@@ -1,7 +1,11 @@
 # java-spring-mvc-sample
-A Spring MVC sample demonstrating controllers, and views.
+Contacts App demonstration Spring framework.
 
-Demonstrates simple MVC Controllers, Views (JSP), and RestControllers.  Provides tests using Mockito and Spring Test.
+USES SPRING:
+* Spring MVC
+* Internalized messages to display views in spanish and english.
+* Spring Security with in memory authentication.
+* Bootstrap and Bootswatch theme to UI
 
-Uses property files to store messages for view.  Support for other languages.
+
 
