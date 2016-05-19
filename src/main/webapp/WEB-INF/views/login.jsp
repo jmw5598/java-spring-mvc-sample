@@ -19,14 +19,20 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 col-centered">
+                    
+                    <!-- LOGIN FORM ERROR -->
+					<c:if test="${param.error == 'true'}">
+						<div class="alert alert-warning" role="alert">
+							<h4><spring:message code="label.error" /></h4>
+							<spring:message code="form.login.error" />
+						</div>
+					</c:if>
+                    
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <form action="${loginUrl}" method="POST">
-                                <!-- DISPLAY ERRORS
-                                    <c:forEach items="${errors}" var="error">
-                                        <span class="error-msg exclam"><c:out value="${error.defaultMessage}" /></span>
-                                    </c:forEach>
-                                -->
+								
+								<!-- ERROR FOR LOGIN -->
                                 <div class="form-group">
                                     <label for="exampleInputEmail1"><spring:message code="placeholder.username" /></label>
                                     <input type="text" class="form-control" id="username" name="username" placeholder="<spring:message code="placeholder.username" />">
