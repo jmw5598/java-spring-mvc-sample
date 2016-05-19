@@ -25,9 +25,9 @@
                                 
                                 <!-- ERRORS -->
                                 <div class="alert alert-warning hide <c:if test="${not empty errors}"><c:out value="show" /></c:if>" role="alert">
-                                	<h4>Errors!</h4>
+                                	<h4><spring:message code="label.error" /></h4>
                                     <c:forEach items="${errors}" var="error">
-                                        <div><c:out value="${error.defaultMessage}" /></div>
+                                        <div><spring:message code="form.login.error" /></div>
                                     </c:forEach>
                                 </div>
                                 
