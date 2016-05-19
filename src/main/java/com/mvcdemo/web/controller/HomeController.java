@@ -49,7 +49,7 @@ public class HomeController {
 	
 	
 	@RequestMapping(value="/home", method=RequestMethod.GET)
-	public String home(Locale locale, Model model) {
+	public String home(Model model) {
 		
 		return "home";
 	
