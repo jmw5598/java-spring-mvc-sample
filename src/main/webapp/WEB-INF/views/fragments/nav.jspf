@@ -1,3 +1,8 @@
+<c:set var="path"   value="${pageContext.request.servletPath}"/>
+<c:set var="locale" value="${pageContext.response.locale}" />
+
+<c:out value="${locale}" />
+
 <div class="container-fluid">
 	<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
@@ -5,39 +10,47 @@
 				<a href="index.html" class="navbar-brand">Contact Book</a>
 			</div>
 			<div class="navbar-collapse collapse" id="navbar-main">
+				<sec:authorize access="isAuthenticated()">
 				<ul class="nav navbar-nav">
-					<li>
+				
+					<!-- if statement to determine which nav button to make active -->
+					<li class="<c:if test="${path == '/WEB-INF/views/home.jsp'}"><c:out value="active" /></c:if>"">
 						<a href="<c:url value="/home" />">
 							<spring:message code="button.home" /><span class="sr-only">(current)</span>
 						</a>
-					<li>
+					<li class="<c:if test="${path == '/WEB-INF/views/contacts.jsp'}"><c:out value="active" /></c:if>"">
 						<a href="<c:url value="/contacts" />">
 							<spring:message code="button.view" />
 						</a>
 					</li>
-					<li>
+					<li class="<c:if test="${loc == '/WEB-INF/views/addForm.jsp'}"><c:out value="active" /></c:if>"">
 						<a href="<c:url value="/contacts/add_form" />">
 							<spring:message code="button.add" />
 						</a>
 					</li>
 				</ul>
+				</sec:authorize>
 				<ul class="nav navbar-nav pull-right">
-					<li class="active">
+				
+					<!-- if statement to determine which locale to mark active -->
+					<li class="<c:if test="${locale == 'en'}"><c:out value="active" /></c:if>"">
 						<a href="<c:url value="/?language=en" />">
 							<spring:message code="label.language.english" />
 						</a>
 					</li>
-					<li>
+					<li class="<c:if test="${locale == 'es'}"><c:out value="active" /></c:if>"">
 						<a href="<c:url value="/?language=es" />">
 							<spring:message code="label.language.spanish" />
 						</a>
 					</li>
+					<sec:authorize access="isAuthenticated()">
 					<li><a>||</a></li>
 					<li>
 						<a href="<c:url value="/logout" />">
 							<spring:message code="button.logout" />
 						</a>
 					</li>
+					</sec:authorize>
 				</ul>
 			</div>
 		</div>
