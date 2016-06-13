@@ -2,10 +2,9 @@ com/mvcdemo/web/controller/ContactController.class
 com/mvcdemo/web/bean/Contact.class
 com/mvcdemo/web/controller/rest/ContactRestController.class
 com/mvcdemo/config/RootConfig.class
+com/mvcdemo/web/controller/HomeController.class
 com/mvcdemo/config/MvcDemoAppInitializer.class
 com/mvcdemo/web/repository/ContactRepository.class
 com/mvcdemo/MvcDemoApplication.class
-com/mvcdemo/web/repository/MyContactRepository.class
-com/mvcdemo/web/bean/MyContact.class
-com/mvcdemo/web/controller/HomeController.class
 com/mvcdemo/config/WebConfig.class
+com/mvcdemo/web/repository/MyContactRepository.class

@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		web
 			.ignoring()
-				.antMatchers("/resources/**", "/login?language");
+				.antMatchers("/resources/**", "/login?language=en", "/login?language=es");
 		
 	}
 	

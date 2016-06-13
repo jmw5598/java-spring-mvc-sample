@@ -1,9 +1,8 @@
 /home/jmw/workspace/MVCDemo/src/main/java/com/mvcdemo/web/controller/HomeController.java
 /home/jmw/workspace/MVCDemo/src/main/java/com/mvcdemo/config/WebConfig.java
 /home/jmw/workspace/MVCDemo/src/main/java/com/mvcdemo/web/repository/MyContactRepository.java
-/home/jmw/workspace/MVCDemo/src/main/java/com/mvcdemo/web/bean/MyContact.java
 /home/jmw/workspace/MVCDemo/src/main/java/com/mvcdemo/web/controller/ContactController.java
-/home/jmw/workspace/MVCDemo/src/main/java/com/mvcdemo/util/TestUtil.java
+/home/jmw/workspace/MVCDemo/src/main/java/com/mvcdemo/config/SecurityConfig.java
 /home/jmw/workspace/MVCDemo/src/main/java/com/mvcdemo/MvcDemoApplication.java
 /home/jmw/workspace/MVCDemo/src/main/java/com/mvcdemo/config/RootConfig.java
 /home/jmw/workspace/MVCDemo/src/main/java/com/mvcdemo/web/controller/rest/ContactRestController.java
