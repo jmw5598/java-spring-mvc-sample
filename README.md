@@ -1,5 +1,6 @@
 # java-spring-mvc-sample
 Contacts App demonstration Spring framework.
+- A simple contacts application to put to use the newly learned Spring modules and concepts.
 
 USES SPRING:
 * Spring MVC
