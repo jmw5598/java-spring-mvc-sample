@@ -8,5 +8,5 @@ USES SPRING:
 * Spring Security with in memory authentication.
 * Bootstrap and Bootswatch theme for UI
 
-
+[SCREENSHOT](https://github.com/jmw5598/java-spring-mvc-sample/tree/master/screenshots)
 
